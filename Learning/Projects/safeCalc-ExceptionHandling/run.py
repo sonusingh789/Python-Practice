@@ -48,21 +48,30 @@ def menu():
 
 while True:
     menu()
-    x=input("Enter x : ")
-    y=input("Enter y : ")
     choice = input(" Enter choice 1-5")
+    try:
+        x=input("Enter x : ")
+        y=input("Enter y : ")
+        if choice =="1":
+            print("Sum : ",add(x,y))
+        elif choice =="2":
+            print("subtract : ",sub(x,y))
+        elif choice =="3":
+            print("Multiply :",mul(x,y))
+        elif choice =="4":
+            print("Divide:", div(x,y))
+        else:
+            print("Invalid Choice")
+            break
+    except ValueError:
+        print("Invalid INPUT")
+    
+    except Exception as e:
+        print(f"An unexpected error has occured: {e}")
+    finally:
+        print(" Thanks for using this safe calculator !!!")
 
-    if choice =="1":
-        print("Sum : ",add(x,y))
-    elif choice =="2":
-        print("subtract : ",sub(x,y))
-    elif choice =="3":
-        print("Multiply :",mul(x,y))
-    elif choice =="4":
-        print("Divide:", div(x,y))
-    else:
-        print("Invalid Choice")
-        break
+
     
 
  
