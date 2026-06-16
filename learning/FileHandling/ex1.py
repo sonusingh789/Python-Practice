@@ -11,7 +11,6 @@ print(f"totalWords :{len(word)} , totalletters :{totalLetters}")
     
 
 count = 0 
-
 with open("file.txt","r") as file:
     for i in file:
         count+=1
