@@ -30,6 +30,17 @@ class Car:
     def get_fuel_type(self):
         return "Unknown"
 
+    # => called as decorators
+    @staticmethod #  static method cannot be accessed by an object/instance  | self X
+    def general_def():
+        return " Cars are too expensive"
+
+    # read only methods
+    @property
+    def model(self):
+        return self._model
+
+
 #Inheritance
 class ElectricCar(Car):
     def __init__(self,brand,model):
