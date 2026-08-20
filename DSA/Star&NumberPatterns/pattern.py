@@ -112,5 +112,56 @@ def pattern5():
         for j in range(6-i):
             print("*", end=" ")
         print()
-# pattern5()
+
+def p5j(n,count):
+    if count>n:
+        return
+    print("*", end=" ")
+    p5j(n,count+1)
+
+def p5i(n):
+    if n>5:
+        return
+    p5j(4-n,0)
+    print()
+    p5i(n+1)
+
+# * * * * *
+# * * * *
+# * * *
+# * *
+# *
+# pattern5() iterative
+# p5i(0) recursive
+#----------------------------------------------------------
+
+def pattern6():
+    for i in range(1,6):
+        for j in range(1,6-i+1):
+            print(j, end=" ")
+        print()
+
+def p6j(n,count):
+    if count>n:
+        return
+
+    print(count, end=" ")
+    p6j(n,count+1)
+
+def p6i(n):
+    if n>6:
+        return
+    p6j(6-n,1)
+    print()
+    p6i(n+1)
+# 1 2 3 4 5
+# 1 2 3 4
+# 1 2 3
+# 1 2
+# 1
+# pattern6() iterative
+# p6i(1) recursive
+
+#--------------------------------------------
+
 
