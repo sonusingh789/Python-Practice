@@ -13,9 +13,10 @@ class Solution:
             freq[num] = freq.get(num, 0) + 1
 
         max_freq = max(freq.values())
-
         ans = float("inf")
+
         for num in freq:
             if freq[num] == max_freq:
                 ans = min(ans, num)
+                
         return ans

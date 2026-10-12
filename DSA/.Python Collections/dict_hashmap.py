@@ -1,4 +1,4 @@
-# 1 . creating Hash Map
+###. Creating Hash Map
 # ------------------------------
 
 d = {}
@@ -34,3 +34,22 @@ print(900 in d.values())  # True or false
 
 # 7 Removing Key , dict.pop(key)
 d.pop(1)
+
+# 8  Returns all the keys in the dictionary
+print(d.keys())
+print(list(d.keys)) # returns keys as list.
+
+# 9 return all the values as  a list.
+print(list(d.values()))
+
+# 10 return all  the key value pairs as a list of tuples.
+print(list(d.items()))
+
+# 11 size of HashMap/dict
+print(len(d))
+
+# 12 check if empty
+print(not d) # false
+
+# 13 clear()
+d.clear()

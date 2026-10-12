@@ -15,3 +15,20 @@ class Solution:
             max_con = tempCount
 
         return max_con
+
+
+
+
+# class Solution:
+#     def findMaxConsecutiveOnes(self, nums):
+#         count = 0
+#         max_con = 0
+
+#         for i in range(len(nums)):
+#             if nums[i] == 1:
+#                 count += 1
+#                 max_con = max(max_con, count)
+#             else:
+#                 count = 0
+
+#         return max_con

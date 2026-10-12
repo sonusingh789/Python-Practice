@@ -7,5 +7,4 @@ def linearSearch(arr, target):
             return i
     return -1
 
-
 print(linearSearch(arr, 200))
