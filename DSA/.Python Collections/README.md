@@ -158,7 +158,6 @@ print(list(student.keys()))   # [1, 2, 3]
 print(list(student.items()))  # [(1, 'Alice'), (2, 'Bob'), (3, 'Charlie')]
 ```
 
-> 💡 `d.keys()` is a method call. Use `list(d.keys())`, not `list(d.keys)`.
 
 **Use**
 
