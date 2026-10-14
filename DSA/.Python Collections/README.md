@@ -1,7 +1,7 @@
 # 🐍 Python Collections 
 
 
-## 📑 Table of Contents
+## Table of Contents
 
 | # | Collection | File | One-line purpose |
 |---|------------|------|------------------|
@@ -14,7 +14,7 @@
 
 ---
 
-## ⚡ Cheat Sheet:
+##  Cheat Sheet:
 
 | I need to... | Use |
 |--------------|-----|
@@ -25,7 +25,7 @@
 | Process items in arrival order (BFS, scheduling) | queue (`deque`) |
 | Always get the smallest (or largest) item next | heap (`heapq`) |
 
-## ⏱️ Time Complexity at a Glance
+##  Time Complexity at a Glance
 
 | Structure | Operation | Average cost |
 |-----------|-----------|--------------|
@@ -52,7 +52,7 @@
 - Mutable: can change after creation
 - Great for sequential data
 
-### Common operations (with examples)
+### Common operations 
 
 | Operation | Description | Example |
 |-----------|-------------|---------|
