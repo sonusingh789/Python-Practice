@@ -1,7 +1,5 @@
-# 🐍 Python Collections — Quick Reference
+# 🐍 Python Collections 
 
-A compact, practical cheat sheet of Python's core collections for DSA practice.
-Each section answers three questions: **what is it, how do its common operations work (with an example for each), and when should I use it?**
 
 ## 📑 Table of Contents
 
@@ -16,7 +14,7 @@ Each section answers three questions: **what is it, how do its common operations
 
 ---
 
-## ⚡ Cheat Sheet: Which One Should I Use?
+## ⚡ Cheat Sheet:
 
 | I need to... | Use |
 |--------------|-----|
@@ -73,7 +71,7 @@ Each section answers three questions: **what is it, how do its common operations
 | `copy()` | Shallow copy of the list | `b = a.copy()` → `b` is a separate list |
 | `clear()` | Remove all elements | `[1, 2].clear()` → `[]` |
 
-### Full example
+### example
 
 ```python
 numbers = [10, 20, 30]
@@ -103,7 +101,7 @@ i = bisect_left(lst, x)
 print(i if i < len(lst) and lst[i] == x else -1)   # 2
 ```
 
-### Handy built-ins
+### built-ins
 
 | Built-in | Description | Example |
 |----------|-------------|---------|
@@ -111,7 +109,7 @@ print(i if i < len(lst) and lst[i] == x else -1)   # 2
 | `sum(lst)` | Sum of elements | `sum([1, 2, 3])` → `6` |
 | `lst[0]`, `lst[-1]` | First and last element | `[7, 8, 9][-1]` → `9` |
 
-**Use when**
+**Use**
 
 - You need ordered data
 - You want to access items by position
@@ -149,7 +147,7 @@ Assume `d = {1: 100, 2: 200}` unless stated otherwise.
 | `not d` | `True` if empty | `not {}` → `True` |
 | `d.clear()` | Remove everything | `d.clear()` → `{}` |
 
-### Full example
+### example
 
 ```python
 student = {1: "Alice", 2: "Bob"}
@@ -162,7 +160,7 @@ print(list(student.items()))  # [(1, 'Alice'), (2, 'Bob'), (3, 'Charlie')]
 
 > 💡 `d.keys()` is a method call. Use `list(d.keys())`, not `list(d.keys)`.
 
-**Use when**
+**Use**
 
 - You need fast lookup by name or id
 - You want to store related data together
@@ -181,7 +179,7 @@ print(list(student.items()))  # [(1, 'Alice'), (2, 'Bob'), (3, 'Charlie')]
 - Average O(1) membership test
 - Elements must be hashable
 
-### Common operations (with examples)
+### Common operations 
 
 Assume `s = {10, 20, 30}` unless stated otherwise.
 
@@ -198,7 +196,7 @@ Assume `s = {10, 20, 30}` unless stated otherwise.
 | `not s` | `True` if empty | `not set()` → `True` |
 | `clear()` | Remove everything | `s.clear()` → `set()` |
 
-### Full example
+### example
 
 ```python
 s = {10, 20, 30}
@@ -218,14 +216,14 @@ Assume `S1 = {1, 2, 3, 4}` and `S2 = {3, 4, 5, 6}`.
 | `S1 - S2` | Difference | In `S1` but not in `S2` | `{1, 2}` |
 | `S1 ^ S2` | Symmetric difference | In either, but not both | `{1, 2, 5, 6}` |
 
-### Handy patterns
+### patterns
 
 | Goal | Example | Result |
 |------|---------|--------|
 | Remove duplicates, keep insertion order | `list(dict.fromkeys([30, 10, 20, 10, 30]))` | `[30, 10, 20]` |
 | Remove duplicates, sorted output | `sorted(set([40, 10, 30, 10, 20, 30]))` | `[10, 20, 30, 40]` |
 
-**Use when**
+**Use**
 
 - You want unique values
 - You need fast membership testing
@@ -239,7 +237,7 @@ Assume `S1 = {1, 2, 3, 4}` and `S2 = {3, 4, 5, 6}`.
 
 Think of a stack of plates: you add and remove from the top.
 
-### Operations (with examples)
+### Operations
 
 Assume `st = [10, 20, 30]` (top is `30`) unless stated otherwise.
 
@@ -252,7 +250,7 @@ Assume `st = [10, 20, 30]` (top is `30`) unless stated otherwise.
 | Size | `len(st)` | Number of items | `len(st)` → `3` |
 | Clear | `st.clear()` | Remove everything | `st.clear()` → `[]` |
 
-### Full example
+###  example
 
 ```python
 stack = []
@@ -263,7 +261,7 @@ print(stack[-1])   # 30 (peek)
 stack.pop()        # removes 30
 ```
 
-**Use when**
+**Use**
 
 - Undo / redo
 - Backtracking
@@ -278,7 +276,7 @@ stack.pop()        # removes 30
 
 Think of a line at a ticket counter. Use `collections.deque` instead of a list, because `list.pop(0)` is O(n) while `deque.popleft()` is O(1).
 
-### Operations (with examples)
+### Operations 
 
 Assume `from collections import deque` and `dq = deque([10, 20, 30])` unless stated otherwise.
 
@@ -293,7 +291,7 @@ Assume `from collections import deque` and `dq = deque([10, 20, 30])` unless sta
 | Is empty | `not dq` | `True` if empty | `not deque()` → `True` |
 | Size | `len(dq)` | Number of items | `len(dq)` → `3` |
 
-### Full example
+### example
 
 ```python
 from collections import deque
@@ -307,7 +305,7 @@ q.popleft()        # removes 5
 
 > A `deque` is double-ended, so it works as both a queue and a stack.
 
-**Use when**
+**Use**
 
 - Task scheduling
 - BFS (breadth-first search) traversal
@@ -325,7 +323,7 @@ q.popleft()        # removes 5
 - `h[0]` is always the smallest item
 - The rest of the list is only partially ordered, so don't expect a fully sorted print
 
-### Operations (with examples)
+### Operations 
 
 Assume `import heapq` and `h = [10, 30, 20]` (already a valid heap) unless stated otherwise.
 
@@ -338,7 +336,7 @@ Assume `import heapq` and `h = [10, 30, 20]` (already a valid heap) unless state
 | Is empty | `not h` | `True` if empty | `not []` → `True` |
 | Clear | `h.clear()` | Remove everything | `h.clear()` → `[]` |
 
-### Full example (min-heap)
+###  example (min-heap)
 
 ```python
 import heapq
@@ -369,7 +367,7 @@ print(-heapq.heappop(h))  # 20
 print(-heapq.heappop(h))  # 10
 ```
 
-**Use when**
+**Use**
 
 - Finding the smallest or largest elements efficiently
 - Priority scheduling
@@ -378,26 +376,4 @@ print(-heapq.heappop(h))  # 10
 
 ---
 
-## 🗂️ Repository Structure
 
-```text
-DSA/.Python Collections/
-├── README.md
-├── list.py
-├── dict_hashmap.py
-├── set_hashset.py
-├── stack.py
-├── queue.py
-└── heapq.py
-```
-
-> ⚠️ **Naming tip:** files named `queue.py` and `heapq.py` can shadow Python's built-in `queue` and `heapq` modules. If `import heapq` inside a script in this folder misbehaves, rename them (for example `queue_deque.py`, `heap_heapq.py`).
-
-## ✅ Quick Revision Checklist
-
-- [ ] List: ordered, indexed, duplicates allowed
-- [ ] Dict: unique keys, O(1) lookup, use `.get(key, default)` to avoid `KeyError`
-- [ ] Set: unique values, O(1) membership, `|` `&` `-` `^`
-- [ ] Stack: LIFO with `append()` / `pop()`
-- [ ] Queue: FIFO with `deque.append()` / `popleft()`
-- [ ] Heap: min-heap with `heappush` / `heappop`, negate values for a max-heap
