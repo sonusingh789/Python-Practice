@@ -1,10 +1,10 @@
-# def myPow(num, n, count=0, result=1):
+def myPow(num, n, count=0, result=1):
 
-#     if count == n:
-#         return result
-#     return myPow(num, n, count + 1, result * num)
+    if count == n:
+        return result
+    return myPow(num, n, count + 1, result * num)
 
-# print(myPow(2, 3))
+print(myPow(2, 3))
 
 
 # handles small numners only
