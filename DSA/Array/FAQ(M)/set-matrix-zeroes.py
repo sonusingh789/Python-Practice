@@ -14,7 +14,7 @@ class Solution:
                     row[i] = 1
                     col[j] = 1
 
-        # Step 2: Set corresponding cells to zero
+        ## Step 2: Set corresponding cells to zero
         for i in range(m):
             for j in range(n):
                 if row[i] == 1 or col[j] == 1:
