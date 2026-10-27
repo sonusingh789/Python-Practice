@@ -16,19 +16,16 @@ class LinkList:
             return
 
         current = self.head
-
         while current.next != None:
             current = current.next
-
         current.next = new_node
 
     def display(self):
-        curr = self.head
 
+        curr = self.head
         while curr != None:
             print(curr.data, end=" --> ")
             curr = curr.next
-
         print("None")
 
 
