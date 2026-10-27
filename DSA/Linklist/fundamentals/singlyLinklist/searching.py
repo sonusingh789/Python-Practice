@@ -8,6 +8,7 @@ class LinkList:
     def __init__(self):
         self.head = None
 
+    # insert at beg
     def append(self, data):
         new_node = Node(data)
 
