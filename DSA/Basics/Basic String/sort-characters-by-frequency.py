@@ -10,7 +10,6 @@ class Solution:
             morpt.append(value)
 
         morpt.sort(reverse=True)
-
         used = set()
         ans = []
 

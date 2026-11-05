@@ -7,5 +7,4 @@ def genSubSequence(arr):
         ans = ans + new
     return ans
 
-
 print(genSubSequence([1, 2, 3]))
